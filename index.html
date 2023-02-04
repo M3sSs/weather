@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kenia&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Kenia&family=Zen+Dots&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Kenia&family=Playfair+Display:ital@1&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="pc.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"style="font-family: 'Zen Dots', cursive;">Weather</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: whitesmoke !important;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" style="background-color: rgb(50, 54, 57) !important;">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" id="city" type="search" placeholder="Search your city here" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+<!-- for main city -->
+    <div class="mainc" id="ff">
+      <span id="container1">
+        <span id="he1">WEATHER OF <span id="cityName"></span> </span>
+      </span>
+      <span class="info" id="c1">
+        <div>TEMPRATURE:  <span id="temp8"></span>°C </div>
+        <div>MAX TEMP: <span id="max_temp8"></span>°C </div>
+        <div>MIN TEMP: <span id="min_temp8"></span>°C </div>
+      </span>
+      <span class="info" id="c2">
+        <div>CLOUD PERCENTAGE:  <span id="cloud_pct8"></span>% </div>
+        <div>HUMIDITY: <span id="humidity8"></span>% </div>
+        <div>FEELS LIKE: <span id="feels_like8"></span>°C </div>
+      </span>
+      <span class="info" id="c3">
+        <div>WIND SPEED:  <span id="wind_speed8"></span>km/hr </div>
+        <div>WIND DEGREE: <span id="wind_degrees8"></span> deg </div>
+        <div>SUNRISE AT: <span id="sunrise8"></span> deg </div>
+        <div>SUNSET AT: <span id="sunset8"></span> deg </div>
+      </span>
+    </div>
+
+<!-- weather region -->
+  <div class="album py-5 bg-light colo" id="bcg">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="dehradun.png" alt=""><h3>DEHRADUN</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <spa">TEMPRATURE :   <span id="temp"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct"></span>%</li>
+                <li>feels like  <span id="feels_like"></span>°C</li>
+                <li>humidity is   <span id="humidity"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees"></span> deg</li>
+                <li>sunrise at  <span id="sunrise"></span> deg</li>
+                <li>sunset at  <span id="sunset"></span> deg</li>
+              </div>
+          <div class="show_hide">
+                <button class="btn1" onclick="lod(0)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="DELHI.jpg" alt=""><h3>DELHI</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <span>TEMPRATURE :   <span id="temp1"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct1"></span>%</li>
+                <li>feels like  <span id="feels_like1"></span>°C</li>
+                <li>humidity is   <span id="humidity1"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp1"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp1"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed1"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees1"></span> deg</li>
+                <li>sunrise at  <span id="sunrise1"></span> deg</li>
+                <li>sunset at  <span id="sunset1"></span> deg</li>
+              </div>
+              <div class="show_hide">
+                <button class="btn1" onclick="lod(1)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="BENGALURU.jpg" alt=""><h3>BENGALURU</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <span>TEMPRATURE :   <span id="temp2"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct2"></span>%</li>
+                <li>feels like  <span id="feels_like2"></span>°C</li>
+                <li>humidity is   <span id="humidity2"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp2"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp2"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed2"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees2"></span> deg</li>
+                <li>sunrise at  <span id="sunrise2"></span> deg</li>
+                <li>sunset at  <span id="sunset2"></span> deg</li>
+              </div>
+              <div class="show_hide">
+                <button class="btn1" onclick="lod(2)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="MUMBAI.jpg" alt=""><h3>MUMBAI</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <span>TEMPRATURE :   <span id="temp3"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct3"></span>%</li>
+                <li>feels like  <span id="feels_like3"></span>°C</li>
+                <li>humidity is   <span id="humidity3"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp3"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp3"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed3"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees3"></span> deg</li>
+                <li>sunrise at  <span id="sunrise3"></span> deg</li>
+                <li>sunset at  <span id="sunset3"></span> deg</li>
+              </div>
+              <div class="show_hide">
+                <button class="btn1" onclick="lod(3)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="CHENNAI.jpg" alt=""><h3>CHENNAI</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <span>TEMPRATURE :   <span id="temp4"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct4"></span>%</li>
+                <li>feels like  <span id="feels_like4"></span>°C</li>
+                <li>humidity is   <span id="humidity4"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp4"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp4"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed4"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees4"></span> deg</li>
+                <li>sunrise at  <span id="sunrise4"></span> deg</li>
+                <li>sunset at  <span id="sunset4"></span> deg</li>
+              </div>
+              <div class="show_hide">
+                <button class="btn1" onclick="lod(4)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="img"><img src="HYDERABAD.jpg" alt=""><h3>HYDERABAD</h3></div>
+            <div class="card-body">
+              <div class="temp_info">
+                <span>TEMPRATURE :   <span id="temp5"></span>°C</span>
+              </div>
+              <div class="more_info" style="display: none;">
+                <li>Cloud pct is   <span id="cloud_pct5"></span>%</li>
+                <li>feels like  <span id="feels_like5"></span>°C</li>
+                <li>humidity is   <span id="humidity5"></span>%</li>
+                <li>minimum temprature is   <span id="min_temp5"></span>°C</li>
+                <li>maximum temprature is   <span id="max_temp5"></span>°C</li>
+                <li>Wind speed is   <span id="wind_speed5"></span>km/hr</li>
+                <li>Wind degree is   <span id="wind_degrees5"></span> deg</li>
+                <li>sunrise at  <span id="sunrise5"></span> deg</li>
+                <li>sunset at  <span id="sunset5"></span> deg</li>
+              </div>
+             <div class="show_hide">
+                <button class="btn1" onclick="lod(5)"><span>SHOW DETAILS</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="s1.js"></script>
+  <script>
+    
+
+  </script>
+  
+  
+  </body>
+</html>
