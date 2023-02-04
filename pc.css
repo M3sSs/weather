@@ -1,0 +1,108 @@
+
+.img{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img img{
+    display: block;
+    width: 94%;
+    height: 15rem;
+  }
+  .img h3{
+    color: #777;
+    font-family: 'Zen Dots', cursive;
+  }
+  .mainc{
+    /* border: gray solid 1px; */
+    display: grid;
+    /* background-color: blanchedalmond; */
+    /* grid-gap: 8rem; */
+    width: 98.7vw;
+    height: 200px;
+    grid-template-rows: repeat(auto-fill,minmax(2,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(3,1fr));
+    row-gap: 10px;
+    column-gap: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-weight: bold;
+    font-size: large;
+    /* font-family: 'Kenia', cursive; */
+    font-family: 'Zen Dots', cursive;
+    color: rgb(12, 66, 66);
+  }
+  .info{
+    background-color: rgb(205, 227, 234);
+    border: 1px #e0f0f5 solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Playfair Display', serif;
+    font-size: large;
+    font-weight: bold;
+  }
+  .temp_info{
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+  }
+ .more_info{
+  font-weight: bold;
+ }
+  .btn1{
+    border-radius: 10px;
+    padding: 2px;
+    outline: none;
+    cursor: pointer;
+    background-color: aliceblue;
+
+  }
+  .btn1:hover{
+    background-color: rgb(114, 107, 107);
+    color: rgb(255, 255, 255);
+  }
+  .btn1 span{
+    font-size: small;
+  }
+#he1{
+  color: rgb(207, 191, 172);
+}
+
+ #bcg{
+  background-color: rgb(50, 54, 57) !important;
+}
+.navbar{
+  background-color: rgb(50, 54, 57) !important;
+  color: whitesmoke;
+}
+.navbar a{
+  color: whitesmoke;
+}
+.shadow-sm{
+  background-color: rgb(50, 54, 57) !important;
+  color: whitesmoke;
+}
+
+#he1{
+  color: whitesmoke;
+}
+
+.img h3{
+  color: whitesmoke;
+}
+
