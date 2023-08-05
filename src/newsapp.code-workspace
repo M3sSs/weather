@@ -1,0 +1,11 @@
+{
+	"folders": [],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "React_Tutorial_Contact_Manager_App-master"
+	},
+	"extensions": {
+		"recommendations": [
+			"xaver.clang-format"
+		]
+	}
+}
